@@ -1,2 +1,0 @@
-Timur molodets
-.________.
