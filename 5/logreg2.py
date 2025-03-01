@@ -9,15 +9,15 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 df = pd.read_csv('5/Question5_Multi_Class_Dataset 1.csv')
 
 # Split features and target
-X = df.iloc[:, :4]  # Select all rows, first 5 columns (features)
-y = df.iloc[:, 4]   # Select all rows, 6th column (target)
+# X = df.iloc[:, :4]  # Select all rows, first 5 columns (features)
+# y = df.iloc[:, 4]   # Select all rows, 6th column (target)
 
 # Alternative way to split if the column names are as expected:
-# X = df[['Feature_1', 'Feature_2', 'Feature_3', 'Feature_4', 'Feature_5']]
-# y = df['Target']
+X = df[['Feature_1', 'Feature_2', 'Feature_3', 'Feature_4']]
+y = df['Target']
 
 # Split the dataset into 75% training and 25% testing
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
 
 # Train the logistic regression model
 model = LogisticRegression()
