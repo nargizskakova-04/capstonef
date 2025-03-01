@@ -6,11 +6,11 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 # Load the data from CSV file
 # Assuming the CSV file has headers Feature_1, Feature_2, Feature_3, Feature_4, Feature_5, Target
-df = pd.read_csv('5/Question5_Logistic_Regression_Dataset.csv')
+df = pd.read_csv('5/Question5_Multi_Class_Dataset 1.csv')
 
 # Split features and target
-X = df.iloc[:, :5]  # Select all rows, first 5 columns (features)
-y = df.iloc[:, 5]   # Select all rows, 6th column (target)
+X = df.iloc[:, :4]  # Select all rows, first 5 columns (features)
+y = df.iloc[:, 4]   # Select all rows, 6th column (target)
 
 # Alternative way to split if the column names are as expected:
 # X = df[['Feature_1', 'Feature_2', 'Feature_3', 'Feature_4', 'Feature_5']]
